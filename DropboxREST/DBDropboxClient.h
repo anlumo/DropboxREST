@@ -28,6 +28,7 @@
 @class DBDropboxFolder;
 
 @interface DBDropboxClient : AFHTTPClient
+@property (assign) BOOL useAppFolder;
 @property (copy) void(^authenticationCallback)(NSString *oauth_token, void(^completionHandler)(NSError *error));
 + (void)setConsumerKey:(NSString*)key andSecret:(NSString*)secret;
 + (DBDropboxClient*)client;

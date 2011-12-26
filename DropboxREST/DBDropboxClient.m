@@ -42,7 +42,7 @@ static NSString *gConsumerSecret;
 @end
 
 @implementation DBDropboxClient
-@synthesize authenticationCallback, oauth_token, oauth_token_secret;
+@synthesize useAppFolder, authenticationCallback, oauth_token, oauth_token_secret;
 
 + (void)setConsumerKey:(NSString*)key andSecret:(NSString*)secret {
 	[gConsumerKey release];
@@ -225,7 +225,7 @@ static NSString *gConsumerSecret;
 			[params setObject:rev forKey:@"rev"];
 		if(hash)
 			[params setObject:hash forKey:@"hash"];
-		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:path?[NSString stringWithFormat:@"/1/metadata/sandbox/%@", path]:@"/1/metadata/sandbox"
+		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:path?[NSString stringWithFormat:@"/1/metadata/%@/%@", self.useAppFolder?@"sandbox":@"dropbox", path]:[@"/1/metadata/" stringByAppendingString:self.useAppFolder?@"sandbox":@"dropbox"]
 												 GETParameters:params
 														scheme:@"https"
 														  host:@"api.dropbox.com"
@@ -256,7 +256,7 @@ static NSString *gConsumerSecret;
 			completionHandler(nil, error);
 			return;
 		}
-		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:[NSString stringWithFormat:@"/1/files_put/sandbox/%@", fullPath]
+		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:[NSString stringWithFormat:@"/1/files_put/%@/%@", self.useAppFolder?@"sandbox":@"dropbox", fullPath]
 												 PUTParameters:[NSDictionary dictionaryWithObjectsAndKeys:
 																overwrite?@"true":@"false", @"overwrite",
 																parent_rev, @"parent_rev", // this might not exist
@@ -292,7 +292,7 @@ static NSString *gConsumerSecret;
 			completionHandler(nil, error);
 			return;
 		}
-		NSURLRequest *req = [GCOAuth URLRequestForPath:[NSString stringWithFormat:@"/1/files/sandbox/%@", fullpath]
+		NSURLRequest *req = [GCOAuth URLRequestForPath:[NSString stringWithFormat:@"/1/files/%@/%@", self.useAppFolder?@"sandbox":@"dropbox", fullpath]
 										 GETParameters:[NSDictionary dictionaryWithObjectsAndKeys:
 														rev, @"rev", nil]
 												scheme:@"https"
@@ -320,7 +320,7 @@ static NSString *gConsumerSecret;
 			completionHandler(nil, error);
 			return;
 		}
-		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:[NSString stringWithFormat:@"/1/shares/sandbox/%@", fullpath]
+		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:[NSString stringWithFormat:@"/1/shares/%@/%@", self.useAppFolder?@"sandbox":@"dropbox", fullpath]
 												POSTParameters:nil
 														  host:@"api.dropbox.com"
 												   consumerKey:gConsumerKey
@@ -352,7 +352,7 @@ static NSString *gConsumerSecret;
 		}
 		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:@"/1/fileops/delete"
 												POSTParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-																@"sandbox", @"root",
+																self.useAppFolder?@"sandbox":@"dropbox", @"root",
 																fullPath, @"path",
 																nil]
 														  host:@"api.dropbox.com"
@@ -383,7 +383,7 @@ static NSString *gConsumerSecret;
 		}
 		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:@"/1/fileops/create_folder"
 												POSTParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-																@"sandbox", @"root",
+																self.useAppFolder?@"sandbox":@"dropbox", @"root",
 																fullPath, @"path",
 																nil]
 														  host:@"api.dropbox.com"
@@ -414,7 +414,7 @@ static NSString *gConsumerSecret;
 		}
 		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:@"/1/fileops/copy"
 												POSTParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-																@"sandbox", @"root",
+																self.useAppFolder?@"sandbox":@"dropbox", @"root",
 																from_fullPath, @"from_path",
 																to_fullPath, @"to_path",
 																nil]
@@ -446,7 +446,7 @@ static NSString *gConsumerSecret;
 		}
 		NSMutableURLRequest *req = [[GCOAuth URLRequestForPath:@"/1/fileops/move"
 												POSTParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-																@"sandbox", @"root",
+																self.useAppFolder?@"sandbox":@"dropbox", @"root",
 																from_fullPath, @"from_path",
 																to_fullPath, @"to_path",
 																nil]
