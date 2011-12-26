@@ -1,0 +1,6 @@
+[submodule "AFNetworking"]
+	path = AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "cocoa-oauth"]
+	path = cocoa-oauth
+	url = https://github.com/anlumo/cocoa-oauth.git

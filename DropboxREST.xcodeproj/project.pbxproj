@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8127793414A8E1D90093EAC0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8127793314A8E1D90093EAC0 /* Cocoa.framework */; };
+		8127793E14A8E1D90093EAC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8127793C14A8E1D90093EAC0 /* InfoPlist.strings */; };
+		8127795214A8E2A90093EAC0 /* GCOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127794D14A8E2A90093EAC0 /* GCOAuth.m */; };
+		8127795414A8E2A90093EAC0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127794F14A8E2A90093EAC0 /* NSData+Base64.m */; };
+		8127796F14A8E2B90093EAC0 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127795914A8E2B90093EAC0 /* AFHTTPClient.m */; };
+		8127797114A8E2B90093EAC0 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127795B14A8E2B90093EAC0 /* AFHTTPRequestOperation.m */; };
+		8127797314A8E2B90093EAC0 /* AFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127795D14A8E2B90093EAC0 /* AFImageCache.m */; };
+		8127797514A8E2B90093EAC0 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127795F14A8E2B90093EAC0 /* AFImageRequestOperation.m */; };
+		8127797714A8E2B90093EAC0 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127796114A8E2B90093EAC0 /* AFJSONRequestOperation.m */; };
+		8127797A14A8E2B90093EAC0 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127796414A8E2B90093EAC0 /* AFNetworkActivityIndicatorManager.m */; };
+		8127797D14A8E2B90093EAC0 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127796714A8E2B90093EAC0 /* AFPropertyListRequestOperation.m */; };
+		8127797F14A8E2B90093EAC0 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127796914A8E2B90093EAC0 /* AFURLConnectionOperation.m */; };
+		8127798114A8E2B90093EAC0 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127796B14A8E2B90093EAC0 /* AFXMLRequestOperation.m */; };
+		8127798914A8E2E20093EAC0 /* DBDropboxClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8127798414A8E2DF0093EAC0 /* DBDropboxClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8127798A14A8E2E30093EAC0 /* DBDropboxClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127798514A8E2DF0093EAC0 /* DBDropboxClient.m */; };
+		8127798B14A8E2E30093EAC0 /* DBDropboxFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 8127798614A8E2E00093EAC0 /* DBDropboxFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8127798C14A8E2E30093EAC0 /* DBDropboxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127798714A8E2E00093EAC0 /* DBDropboxFile.m */; };
+		8127798D14A8E2E30093EAC0 /* DBDropboxFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8127798814A8E2E10093EAC0 /* DBDropboxFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8127798F14A8E6850093EAC0 /* DBDropboxFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127798E14A8E6850093EAC0 /* DBDropboxFolder.m */; };
+		8127799014A8E8E20093EAC0 /* DropboxREST.h in Headers */ = {isa = PBXBuildFile; fileRef = 8127794014A8E1D90093EAC0 /* DropboxREST.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8127799114A8F0960093EAC0 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8127795814A8E2B90093EAC0 /* AFHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8127793014A8E1D90093EAC0 /* DropboxREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropboxREST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8127793314A8E1D90093EAC0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8127793614A8E1D90093EAC0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8127793714A8E1D90093EAC0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8127793814A8E1D90093EAC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8127793B14A8E1D90093EAC0 /* DropboxREST-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropboxREST-Info.plist"; sourceTree = "<group>"; };
+		8127793D14A8E1D90093EAC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8127793F14A8E1D90093EAC0 /* DropboxREST-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropboxREST-Prefix.pch"; sourceTree = "<group>"; };
+		8127794014A8E1D90093EAC0 /* DropboxREST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropboxREST.h; sourceTree = "<group>"; };
+		8127794C14A8E2A90093EAC0 /* GCOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCOAuth.h; sourceTree = "<group>"; };
+		8127794D14A8E2A90093EAC0 /* GCOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCOAuth.m; sourceTree = "<group>"; };
+		8127794E14A8E2A90093EAC0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		8127794F14A8E2A90093EAC0 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		8127795814A8E2B90093EAC0 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		8127795914A8E2B90093EAC0 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		8127795A14A8E2B90093EAC0 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		8127795B14A8E2B90093EAC0 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		8127795C14A8E2B90093EAC0 /* AFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageCache.h; sourceTree = "<group>"; };
+		8127795D14A8E2B90093EAC0 /* AFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageCache.m; sourceTree = "<group>"; };
+		8127795E14A8E2B90093EAC0 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		8127795F14A8E2B90093EAC0 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		8127796014A8E2B90093EAC0 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		8127796114A8E2B90093EAC0 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		8127796214A8E2B90093EAC0 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		8127796314A8E2B90093EAC0 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		8127796414A8E2B90093EAC0 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		8127796514A8E2B90093EAC0 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		8127796614A8E2B90093EAC0 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		8127796714A8E2B90093EAC0 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		8127796814A8E2B90093EAC0 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		8127796914A8E2B90093EAC0 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		8127796A14A8E2B90093EAC0 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		8127796B14A8E2B90093EAC0 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		8127798414A8E2DF0093EAC0 /* DBDropboxClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBDropboxClient.h; sourceTree = "<group>"; };
+		8127798514A8E2DF0093EAC0 /* DBDropboxClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBDropboxClient.m; sourceTree = "<group>"; };
+		8127798614A8E2E00093EAC0 /* DBDropboxFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBDropboxFile.h; sourceTree = "<group>"; };
+		8127798714A8E2E00093EAC0 /* DBDropboxFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBDropboxFile.m; sourceTree = "<group>"; };
+		8127798814A8E2E10093EAC0 /* DBDropboxFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBDropboxFolder.h; sourceTree = "<group>"; };
+		8127798E14A8E6850093EAC0 /* DBDropboxFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBDropboxFolder.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8127792C14A8E1D90093EAC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8127793414A8E1D90093EAC0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8127792414A8E1D90093EAC0 = {
+			isa = PBXGroup;
+			children = (
+				8127795714A8E2B90093EAC0 /* AFNetworking */,
+				8127794B14A8E2A90093EAC0 /* cocoa-oauth */,
+				8127793914A8E1D90093EAC0 /* DropboxREST */,
+				8127793214A8E1D90093EAC0 /* Frameworks */,
+				8127793114A8E1D90093EAC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8127793114A8E1D90093EAC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8127793014A8E1D90093EAC0 /* DropboxREST.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8127793214A8E1D90093EAC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8127793314A8E1D90093EAC0 /* Cocoa.framework */,
+				8127793514A8E1D90093EAC0 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8127793514A8E1D90093EAC0 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8127793614A8E1D90093EAC0 /* AppKit.framework */,
+				8127793714A8E1D90093EAC0 /* CoreData.framework */,
+				8127793814A8E1D90093EAC0 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8127793914A8E1D90093EAC0 /* DropboxREST */ = {
+			isa = PBXGroup;
+			children = (
+				8127794014A8E1D90093EAC0 /* DropboxREST.h */,
+				8127798414A8E2DF0093EAC0 /* DBDropboxClient.h */,
+				8127798514A8E2DF0093EAC0 /* DBDropboxClient.m */,
+				8127798614A8E2E00093EAC0 /* DBDropboxFile.h */,
+				8127798714A8E2E00093EAC0 /* DBDropboxFile.m */,
+				8127798814A8E2E10093EAC0 /* DBDropboxFolder.h */,
+				8127798E14A8E6850093EAC0 /* DBDropboxFolder.m */,
+				8127793A14A8E1D90093EAC0 /* Supporting Files */,
+			);
+			path = DropboxREST;
+			sourceTree = "<group>";
+		};
+		8127793A14A8E1D90093EAC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8127793B14A8E1D90093EAC0 /* DropboxREST-Info.plist */,
+				8127793C14A8E1D90093EAC0 /* InfoPlist.strings */,
+				8127793F14A8E1D90093EAC0 /* DropboxREST-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8127794B14A8E2A90093EAC0 /* cocoa-oauth */ = {
+			isa = PBXGroup;
+			children = (
+				8127794C14A8E2A90093EAC0 /* GCOAuth.h */,
+				8127794D14A8E2A90093EAC0 /* GCOAuth.m */,
+				8127794E14A8E2A90093EAC0 /* NSData+Base64.h */,
+				8127794F14A8E2A90093EAC0 /* NSData+Base64.m */,
+			);
+			path = "cocoa-oauth";
+			sourceTree = SOURCE_ROOT;
+		};
+		8127795714A8E2B90093EAC0 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8127795814A8E2B90093EAC0 /* AFHTTPClient.h */,
+				8127795914A8E2B90093EAC0 /* AFHTTPClient.m */,
+				8127795A14A8E2B90093EAC0 /* AFHTTPRequestOperation.h */,
+				8127795B14A8E2B90093EAC0 /* AFHTTPRequestOperation.m */,
+				8127795C14A8E2B90093EAC0 /* AFImageCache.h */,
+				8127795D14A8E2B90093EAC0 /* AFImageCache.m */,
+				8127795E14A8E2B90093EAC0 /* AFImageRequestOperation.h */,
+				8127795F14A8E2B90093EAC0 /* AFImageRequestOperation.m */,
+				8127796014A8E2B90093EAC0 /* AFJSONRequestOperation.h */,
+				8127796114A8E2B90093EAC0 /* AFJSONRequestOperation.m */,
+				8127796214A8E2B90093EAC0 /* AFJSONUtilities.h */,
+				8127796314A8E2B90093EAC0 /* AFNetworkActivityIndicatorManager.h */,
+				8127796414A8E2B90093EAC0 /* AFNetworkActivityIndicatorManager.m */,
+				8127796514A8E2B90093EAC0 /* AFNetworking.h */,
+				8127796614A8E2B90093EAC0 /* AFPropertyListRequestOperation.h */,
+				8127796714A8E2B90093EAC0 /* AFPropertyListRequestOperation.m */,
+				8127796814A8E2B90093EAC0 /* AFURLConnectionOperation.h */,
+				8127796914A8E2B90093EAC0 /* AFURLConnectionOperation.m */,
+				8127796A14A8E2B90093EAC0 /* AFXMLRequestOperation.h */,
+				8127796B14A8E2B90093EAC0 /* AFXMLRequestOperation.m */,
+			);
+			name = AFNetworking;
+			path = AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8127792D14A8E1D90093EAC0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8127799014A8E8E20093EAC0 /* DropboxREST.h in Headers */,
+				8127798914A8E2E20093EAC0 /* DBDropboxClient.h in Headers */,
+				8127798B14A8E2E30093EAC0 /* DBDropboxFile.h in Headers */,
+				8127798D14A8E2E30093EAC0 /* DBDropboxFolder.h in Headers */,
+				8127799114A8F0960093EAC0 /* AFHTTPClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8127792F14A8E1D90093EAC0 /* DropboxREST */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8127794514A8E1D90093EAC0 /* Build configuration list for PBXNativeTarget "DropboxREST" */;
+			buildPhases = (
+				8127792B14A8E1D90093EAC0 /* Sources */,
+				8127792C14A8E1D90093EAC0 /* Frameworks */,
+				8127792D14A8E1D90093EAC0 /* Headers */,
+				8127792E14A8E1D90093EAC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropboxREST;
+			productName = DropboxREST;
+			productReference = 8127793014A8E1D90093EAC0 /* DropboxREST.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8127792614A8E1D90093EAC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Andreas Monitzer";
+			};
+			buildConfigurationList = 8127792914A8E1D90093EAC0 /* Build configuration list for PBXProject "DropboxREST" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8127792414A8E1D90093EAC0;
+			productRefGroup = 8127793114A8E1D90093EAC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8127792F14A8E1D90093EAC0 /* DropboxREST */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8127792E14A8E1D90093EAC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8127793E14A8E1D90093EAC0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8127792B14A8E1D90093EAC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8127795214A8E2A90093EAC0 /* GCOAuth.m in Sources */,
+				8127795414A8E2A90093EAC0 /* NSData+Base64.m in Sources */,
+				8127796F14A8E2B90093EAC0 /* AFHTTPClient.m in Sources */,
+				8127797114A8E2B90093EAC0 /* AFHTTPRequestOperation.m in Sources */,
+				8127797314A8E2B90093EAC0 /* AFImageCache.m in Sources */,
+				8127797514A8E2B90093EAC0 /* AFImageRequestOperation.m in Sources */,
+				8127797714A8E2B90093EAC0 /* AFJSONRequestOperation.m in Sources */,
+				8127797A14A8E2B90093EAC0 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				8127797D14A8E2B90093EAC0 /* AFPropertyListRequestOperation.m in Sources */,
+				8127797F14A8E2B90093EAC0 /* AFURLConnectionOperation.m in Sources */,
+				8127798114A8E2B90093EAC0 /* AFXMLRequestOperation.m in Sources */,
+				8127798A14A8E2E30093EAC0 /* DBDropboxClient.m in Sources */,
+				8127798C14A8E2E30093EAC0 /* DBDropboxFile.m in Sources */,
+				8127798F14A8E6850093EAC0 /* DBDropboxFolder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8127793C14A8E1D90093EAC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8127793D14A8E1D90093EAC0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8127794314A8E1D90093EAC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8127794414A8E1D90093EAC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8127794614A8E1D90093EAC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropboxREST/DropboxREST-Prefix.pch";
+				INFOPLIST_FILE = "DropboxREST/DropboxREST-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		8127794714A8E1D90093EAC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropboxREST/DropboxREST-Prefix.pch";
+				INFOPLIST_FILE = "DropboxREST/DropboxREST-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8127792914A8E1D90093EAC0 /* Build configuration list for PBXProject "DropboxREST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8127794314A8E1D90093EAC0 /* Debug */,
+				8127794414A8E1D90093EAC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8127794514A8E1D90093EAC0 /* Build configuration list for PBXNativeTarget "DropboxREST" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8127794614A8E1D90093EAC0 /* Debug */,
+				8127794714A8E1D90093EAC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8127792614A8E1D90093EAC0 /* Project object */;
+}
